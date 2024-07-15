@@ -1,4 +1,7 @@
 package com.example.post.interfaces.dtos;
 
-public record UserDTO(String name, String email, String password) {
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+
+public record UserDTO(@NotBlank String name, @NotBlank @Email String email, @NotBlank String password) {
 }
