@@ -8,4 +8,6 @@ public interface IUserRepository {
     void save(UserDTO user);
 
     Boolean findByName(String name);
+
+    Boolean findByEmail(String email);
 }

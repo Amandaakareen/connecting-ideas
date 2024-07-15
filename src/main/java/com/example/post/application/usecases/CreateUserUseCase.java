@@ -12,9 +12,13 @@ public class CreateUserUseCase  {
     private IUserRepository iUserRepository;
 
     public void create(UserDTO userDTO) {
-        Boolean userIsExist = iUserRepository.findByName(userDTO.name());
-        if(userIsExist) {
+        Boolean nameIsExist = iUserRepository.findByName(userDTO.name());
+        if(nameIsExist) {
             throw new RuntimeException("esse nome já existe");
+        }
+        Boolean emailIsExist = iUserRepository.findByEmail(userDTO.email());
+        if(emailIsExist) {
+            throw new RuntimeException("esse email já existe");
         }
         iUserRepository.save(userDTO);
     }

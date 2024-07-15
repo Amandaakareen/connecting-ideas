@@ -30,4 +30,10 @@ public class UserRepositoryAdapter implements IUserRepository {
         Optional<User> user = userRepository.findByName(name);
         return user.isPresent();
     }
+
+    @Override
+    public Boolean findByEmail(String email) {
+        Optional<User> user = userRepository.findByEmail(email);
+        return user.isPresent();
+    }
 }
