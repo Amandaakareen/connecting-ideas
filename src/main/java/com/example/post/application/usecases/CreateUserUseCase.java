@@ -14,7 +14,7 @@ public class CreateUserUseCase  {
     public void create(UserDTO userDTO) {
         Boolean userIsExist = iUserRepository.findByName(userDTO.name());
         if(userIsExist) {
-            throw new RuntimeException("esse nome já existe!");
+            throw new RuntimeException("esse nome já existe");
         }
         iUserRepository.save(userDTO);
     }
