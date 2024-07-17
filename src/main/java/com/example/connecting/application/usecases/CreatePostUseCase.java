@@ -1,6 +1,6 @@
-package com.example.post.application.usecases;
+package com.example.connecting.application.usecases;
 
-import com.example.post.interfaces.dtos.PostDTO;
+import com.example.connecting.interfaces.dtos.PostDTO;
 import org.springframework.stereotype.Service;
 
 @Service

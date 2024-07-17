@@ -1,4 +1,4 @@
-package com.example.post.interfaces.dtos;
+package com.example.connecting.interfaces.dtos;
 
 
 import lombok.AllArgsConstructor;

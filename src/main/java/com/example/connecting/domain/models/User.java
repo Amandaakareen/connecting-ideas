@@ -1,4 +1,4 @@
-package com.example.post.domain.models;
+package com.example.connecting.domain.models;
 
 
 import lombok.AllArgsConstructor;

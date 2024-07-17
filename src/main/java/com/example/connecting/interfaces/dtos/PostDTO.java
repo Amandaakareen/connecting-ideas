@@ -1,4 +1,4 @@
-package com.example.post.interfaces.dtos;
+package com.example.connecting.interfaces.dtos;
 
 
 import lombok.AllArgsConstructor;
@@ -10,9 +10,13 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class CommentDTO {
+public class PostDTO {
 
     private String user;
-    private String comment;
+    private String title;
+    private List<String> userLikes;
+    private List<ContentDTO> contents;
     private List<CommentDTO> comments;
+
+
 }

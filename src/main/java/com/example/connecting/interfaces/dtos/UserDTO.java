@@ -1,4 +1,4 @@
-package com.example.post.interfaces.dtos;
+package com.example.connecting.interfaces.dtos;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;

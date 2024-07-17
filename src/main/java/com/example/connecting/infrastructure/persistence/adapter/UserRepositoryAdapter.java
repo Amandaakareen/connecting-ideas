@@ -1,9 +1,9 @@
-package com.example.post.infrastructure.persistence.adapter;
+package com.example.connecting.infrastructure.persistence.adapter;
 
-import com.example.post.domain.models.User;
-import com.example.post.domain.repository.IUserRepository;
-import com.example.post.infrastructure.persistence.UserRepository;
-import com.example.post.interfaces.dtos.UserDTO;
+import com.example.connecting.domain.models.User;
+import com.example.connecting.domain.repository.IUserRepository;
+import com.example.connecting.infrastructure.persistence.UserRepository;
+import com.example.connecting.interfaces.dtos.UserDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

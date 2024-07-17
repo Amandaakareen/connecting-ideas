@@ -1,8 +1,8 @@
-package com.example.post.interfaces.controllers;
+package com.example.connecting.interfaces.controllers;
 
 
-import com.example.post.application.usecases.CreatePostUseCase;
-import com.example.post.interfaces.dtos.PostDTO;
+import com.example.connecting.application.usecases.CreatePostUseCase;
+import com.example.connecting.interfaces.dtos.PostDTO;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
