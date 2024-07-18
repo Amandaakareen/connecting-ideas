@@ -13,16 +13,10 @@ public class CreateUserUseCase  {
     private IUserRepository iUserRepository;
 
     public void create(UserDTO userDTO) {
-        Boolean nameIsExist = iUserRepository.findByName(userDTO.name());
-        if(nameIsExist) {
-            throw new RuntimeException("esse nome já existe");
-        }
-        Boolean emailIsExist = iUserRepository.findByEmail(userDTO.email());
-        if(emailIsExist) {
-            throw new RuntimeException("esse email já existe");
-        }
-        PasswordValidator.validatePassword(userDTO.password());
-        iUserRepository.save(userDTO);
+       iUserRepository.existByName(userDTO.name());
+       iUserRepository.existByEmail(userDTO.email());
+       PasswordValidator.validatePassword(userDTO.password());
+       iUserRepository.save(userDTO);
     }
 
 }

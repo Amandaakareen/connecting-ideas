@@ -6,7 +6,7 @@ import com.example.connecting.interfaces.dtos.UserDTO;
 public interface IUserRepository {
     void save(UserDTO user);
 
-    Boolean findByName(String name);
+    void existByName(String name);
 
-    Boolean findByEmail(String email);
+    void existByEmail(String email);
 }

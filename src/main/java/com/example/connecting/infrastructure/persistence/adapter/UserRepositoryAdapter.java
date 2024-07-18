@@ -26,14 +26,18 @@ public class UserRepositoryAdapter implements IUserRepository {
     }
 
     @Override
-    public Boolean findByName(String name) {
+    public void existByName(String name) {
         Optional<User> user = userRepository.findByName(name);
-        return user.isPresent();
+        if( user.isPresent()) {
+            throw new RuntimeException("esse nome já existe");
+        }
     }
 
     @Override
-    public Boolean findByEmail(String email) {
+    public void existByEmail(String email) {
         Optional<User> user = userRepository.findByEmail(email);
-        return user.isPresent();
+        if(user.isPresent()) {
+            throw new RuntimeException("esse email já existe");
+        }
     }
 }

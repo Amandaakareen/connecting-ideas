@@ -14,14 +14,17 @@ public class PasswordValidator {
         if (password == null || password.length() < MIN_LENGTH) {
             throw new RuntimeException("A senha deve ter pelo menos " + MIN_LENGTH + " caracteres.");
         }
+        if (password.contains(" ")) {
+            throw new RuntimeException( "A senha não deve conter espaços em branco.");
+        }
 
-//        if (!UPPER_CASE.matcher(password).find()) {
-//            throw new RuntimeException( "A senha deve conter pelo menos uma letra maiúscula.");
-//        }
-//
-//        if (!LOWER_CASE.matcher(password).find()) {
-//            throw new RuntimeException( "A senha deve conter pelo menos uma letra minúscula.");
-//        }
+        if (!UPPER_CASE.matcher(password).find()) {
+            throw new RuntimeException( "A senha deve conter pelo menos uma letra maiúscula.");
+        }
+
+        if (!LOWER_CASE.matcher(password).find()) {
+            throw new RuntimeException( "A senha deve conter pelo menos uma letra minúscula.");
+        }
 
         if (!DIGIT.matcher(password).find()) {
             throw new RuntimeException( "A senha deve conter pelo menos um número.");
